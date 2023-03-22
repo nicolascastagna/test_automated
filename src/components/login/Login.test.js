@@ -19,7 +19,7 @@ jest.mock("axios", () => ({
 it("username input should be rendered", () => {
   render(<Login />);
   const usernameInputEl = screen.getByPlaceholderText(/username/i);
-  expect(usernameInputEl).toBeInTheDocument();
+  expect(usernameInputEl).not.toBeInTheDocument();
 });
 it("password input should be rendered", () => {
   render(<Login />);
